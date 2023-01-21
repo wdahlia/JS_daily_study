@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Visibility</title>
+  <link rel="stylesheet" href="./static/style.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+    }
+
+    body, h1, h4 {
+      margin: 0;
+    }
+
+    button {
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      background: url('./static/svg/background.svg') no-repeat;
+      background-size: cover;
+      animation: upDown 5s infinite alternate;
+    }
+
+    @keyframes upDown {
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .login-box {
+      width: 400px;
+      text-align: center;
+      border-radius: 28px;
+      background-color: #ffffff;
+      padding: 100px 30px 64px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-box h1 {
+      font-size: 2.3rem;
+      font-weight: 500;
+      letter-spacing: -0.8px;
+    }
+    
+    .login-box h4 {
+      color: #837f90;
+      font-weight: 600;
+    }
+
+    .login-box input[id="user"],
+    .login-box input[id="pw"],
+    .login-box input[id="submit-btn"]{
+      outline: none;
+      border: none;
+      width: 100%;
+      height: 50px;
+      padding: 0 16px;
+      border-radius: 10px;
+    }
+
+    #login-form {
+      display: grid;
+      gap: 18px;
+      margin-top: 2rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .login-box input[id="user"],
+    .login-box input[id="pw"] {
+      background-color: #edeaf7;
+    }
+
+    .login-box input[id="submit-btn"] {
+      background-color: #703eff;
+      color: #f9f9f9;
+      font-size: 1rem;
+    }
+
+    .login-password {
+      position: relative;
+    }
+
+    .visible-btn {
+      position: absolute;
+      background: url('./static/svg/hide.svg') no-repeat;
+      background-size: 85%;
+      background-position: center;
+      width: 30px;
+      height: 30px;
+      top: 50%;
+      right: 20px;
+      translate: 0 -50%;
+    }
+
+    .login-box input::placeholder {
+      color: #aaa7bc;
+    }
+
+
+   
+
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h1>Login</h1>
+    <h4>Enter your credentials</h4>
+    <form action="" id="login-form" method="post">
+      <input type="text" name="" id="user" placeholder="Username">
+      <div class="login-password">
+        <input type="password" name="" id="pw" placeholder="Password">
+        <button type="button" class="visible-btn"></button>
+      </div>
+      <input type="submit" value="LOGIN" id="submit-btn">
+    </form>
+  </div>
+
+  <script src="./static/app.js"></script>
+  <script>
+
+    // 기존 코드는 onclick(this)로 되어있는 코드임
+    // 125번째 줄 html 코드 상에서 <button type="button" class="visible-btn" onclick="togglePassword(this)"></button> 
+    // const togglePassword = (button) => {
+    //   button.classList.toggle("showing");
+    //   const input = document.getElementById("password");
+    //   input.type = input.type === "password" ? "text" : "password";
+    // };
+    // addEventListener로 변경
+    const visibleBtn = document.querySelector('.visible-btn');
+    const password = document.getElementById('pw');
+    visibleBtn.addEventListener('click', () => {
+      password.type = password.type === 'password' ? 'text' : 'password';
+    });
+  </script>
+</body>
+</html>
