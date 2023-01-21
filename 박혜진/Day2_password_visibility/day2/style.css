@@ -1,0 +1,123 @@
+* {
+    /* 박스 사이즈를 테두리 기준으로 설정 */
+    box-sizing: border-box;
+  }
+  
+  html,
+  body,
+  .wrapper {
+    height: 100%;
+  }
+  
+  /* 효과 지정 */
+  @keyframes rotate {
+    100% {
+      /* 배경 위치 지정 가로 / 세로 */
+      background-position: 0% 50%;
+    }
+  }
+  
+  body {
+    display: grid;
+    /* 그리드 속성 중앙 배열 */
+    place-items: center;
+    margin: 0;
+    background-image: url("background.svg");
+    background-repeat: no-repeat;
+    /* 배경이미지 크기 설정 : 지정한 요소를 다 덮도록 배경이미지를 확대/축소 */
+    background-size: cover;
+    font-family: "Euclid Circular A";
+    color: #3a334e;
+    animation: rotate 1s infinite alternate linear;
+  }
+  
+  button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+  
+  .control {
+    border: 0;
+    border-radius: 8px;
+    /* border 바깥 외곽선 */
+    outline: none;
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    background: #edeaf7;
+    color: #5a4f79;
+    font-family: inherit;
+    font-size: 16px;
+    transition: 0.4s;
+  }
+  
+  .login-card {
+    width: 400px;
+    padding: 100px 30px 64px;
+    border-radius: 1.25rem;
+    background: #ffffff;
+    text-align: center;
+  }
+  
+  .login-card > h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 6px;
+  }
+  
+  .login-card > h3 {
+    color: #837f90;
+    margin: 0 0 40px;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .login-form {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    /* 내부의 자식 요소들이 일정한 간격으로 떨어져 위치할 수 있도록 사용하는 스타일 속성 */
+    gap: 16px;
+  }
+  
+  .login-form input.control::placeholder {
+    color: #aaa7bc;
+  }
+  
+  .login-form > button.control {
+    cursor: pointer;
+    width: 100%;
+    height: 56px;
+    padding: 0 16px;
+    background: #703eff;
+    color: #f9f9f9;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+  }
+  
+  .password {
+    position: relative;
+  }
+  
+  .toggle {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    translate: 0 -50%;
+    width: 30px;
+    height: 30px;
+    background-image: url("show.svg");
+    background-size: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .toggle.showing {
+    background-image: url("hide.svg");
+  }

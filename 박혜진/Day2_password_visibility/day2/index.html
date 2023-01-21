@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password visibility</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- 부트스트랩 아이콘 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="login-card">
+        <h2>Login</h2>
+        <h3>Enter your credentials</h3>
+        <form class="login-form">
+          <input class="control" type="text" placeholder="Username" />
+          <div class="password">
+            <input id="password" type="password" class="control" placeholder="Password" />
+            <button class="toggle" type="button" onclick="togglePassword(this)">
+                <span id="icon"><i class="bi bi-eye"></i></span>
+            </button>
+          </div>
+          <button class="control">LOGIN</button>
+        </form>
+      </div>
+    <script src="./index.js"></script>
+</body>
+</html>
