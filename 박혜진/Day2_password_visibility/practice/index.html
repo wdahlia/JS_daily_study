@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 보이기</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="login-card">
+        <h1>로그인</h1>
+        <form class="login-form">
+            <div><input class="control" type="text" placeholder="아이디"></div>
+            <div>
+                <input id="password" class="control" type="password" placeholder="비밀번호">
+                <button type="button" id="button" class="toggle" onclick="togglePassword(this)">
+                    <span class="eye"><i class="bi bi-eye"></i></span>
+                    <span class="slash"><i class="bi bi-eye-slash"></i></span>
+                </button>
+            </div>
+            <button class="control">로그인</button>
+        </form>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
