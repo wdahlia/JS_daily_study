@@ -1,0 +1,85 @@
+
+:root {
+  --bg: #fbfeb2;
+  --dark-bg: #1d202e;
+  --tg: #ffd363;
+  --dark-tg: #80aee7;
+  --tit: #b3dc94;
+  --dark-tit: #c5d4e0;
+}
+
+body {
+  background-color: var(--bg);
+  position: relative;
+  -webkit-transition: .4s;
+  transition: .4s;
+} 
+/* 원래 클론 코딩 코드에는 body가 아닌 label에 switch라는 클래스를 설정하여 그곳에 position: relative를 써주었는데
+나의 경우, 클래스를 주지않고 body에 relative를 주어버렸다. */
+
+/* dark 모드 */
+.dark {
+  background-color: var(--dark-bg);
+  -webkit-transition: .4s; /* http://www.tcpschool.com/css/css3_transform_transition 크롬, 사파리 브라우저 적용*/
+  transition: .4s;
+}
+
+.dark h1 {
+  color: var(--dark-tit);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+h1 {
+  font-weight: 800;
+  font-size: 5rem;
+  text-align: center;
+  color: var(--tit);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+
+input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  left: 48vw;
+  right: -48vw;
+  width: 60px;
+  height: 35px;
+  background-color: var(--tg);
+  border-radius: 35px;
+  cursor: pointer; /* http://home.dongyang.ac.kr/~cwkwon/my_lecture/lec_html/lecture_for_CSS/css_cursor.html */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background-color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  top: 5px;
+  left: 5px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--dark-tg);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -moz-transform: translateX(24px);
+  transform: translateX(24px);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
