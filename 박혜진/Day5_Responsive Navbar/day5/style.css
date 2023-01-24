@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    font-family: 'KIMM_Bold';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #dee1e2;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 15px 15px rgb(0, 0, 0, 0.05);
+}
+
+.logo {
+    text-decoration: none;
+    color: #000;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    position: relative;
+    font-size: 15px;
+    color: grey;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+header ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: gray;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+header ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.searchbox {
+    position: absolute;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    padding: 0px 30px;
+    transition: 0.5s ease-in-out;
+}
+
+.searchbox.active {
+    right: 0;
+}
+
+.searchbox input {
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 50px;
+    color: gray;
+    font-size: 17px;
+    background: #fff;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.5);    
+}
+
+.searchbtn {
+    position: relative;
+    left: 30px;
+    top: 2.5px;
+    transition: 0.5s ease-in-out;
+}
+
+.searchbtn.active {
+    left: 0;
+}
+
+.closebtn {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    scale: 0;
+}
+
+.closebtn.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    scale: 1;
+}
+
+.menutoggle {
+    display: none;
+    position: relative;
+}
+
+@media (max-width: 800px) {
+    .searchbtn {
+        left: 0;
+    }
+
+    .menutoggle {
+        position: absolute;
+        display: block;
+        font-size: 32px;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+
+    header .navigation {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        left: 100%;
+    }
+
+    header.open.navigation {
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        top: 80px;
+        background: #fff;
+        width: 100%;
+        height: calc(100vh - 80px);
+        padding: 40px;
+        border-top: 1px solid rgb(0, 0, 0, 0.05);
+    }
+
+    header.open.navigation li a {
+        font-size: 14px;
+    }
+
+    .hide {
+        display: none;
+    }
+}
