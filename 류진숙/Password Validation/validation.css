@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0; /* style 초기화 */
+  padding: 0;
+  font-family: Poppins, sans-serif;
+}
+
+input {
+  outline: 0;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgb(194, 194, 241);
+}
+
+.box {
+  position: relative;
+  width: 400px;
+}
+
+.box .inputBox {
+  position: relative;
+}
+
+.box .inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  border-radius: 28px;
+  box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.1);
+  background-color: rgba(252, 248, 255, 0.775);
+}
+
+.box .inputBox .show-icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(118, 100, 127, 0.624);
+  border-radius: 50%;
+  top: 5px;
+  right: 10px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.box .inputBox .show-icon::before {
+  content: '\f06e';
+  font-family: fontAwesome;
+  font-size: 1.3rem;
+  color: rgba(61, 59, 63, 0.581);
+}
+
+.box .inputBox .show-icon.hide::before {
+  content: '\f070';
+  font-family: fontAwesome;
+}
+
+.box .validation {
+  position: relative;
+  top: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(118, 100, 127, 0.624);
+  color: rgba(255, 255, 255, 0.696);
+  font-size: 1.02rem;
+  letter-spacing: -0.8px;
+}
+
+.box .validation li {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 7px;
+}
+
+.box .validation li.valid {
+  color: rgba(255, 255, 255, 0.271);
+}
+
+.box .validation li::before {
+  content: '\f057';
+  font-family: fontAwesome;
+  color: rgba(118, 100, 127, 0.919);
+}
+
+.box .validation li.valid::before {
+  content: '\f058';
+  font-family: fontAwesome;
+  color: rgb(82, 167, 123);
+}
+
+.box .validation li span {
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.box .validation li.valid span {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.271);
+}
