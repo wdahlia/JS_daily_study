@@ -54,6 +54,7 @@ body {
   top: 5px;
   right: 10px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1); 
+  cursor: pointer;
 }
 
 .box .inputBox .show-icon::before {
