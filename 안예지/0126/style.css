@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
+
+:root {
+    --main-box-shadow: 0 30px 30px rgba(0, 0, 0, 0.05);
+    --menu-border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #fec89a;
+}
+
+
+.dropdown {
+    position: relative;
+    margin-top: 100px;
+    width: 300px;
+    height: 50px;
+}
+.dropdown input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    box-shadow: var(--main-box-shadow);
+    border: 1px solid gray;
+    outline: none;
+    padding: 5px 10px;
+}
+.dropdown::before {
+    content: '<';
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    z-index: 10;
+    transition: .5s;
+    transform: rotate(-90deg);
+}
+.dropdown.active::before {
+    transform: rotate(90deg);
+}
+
+.dropdown .option {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    background: #fff;
+    margin-top: 15px;
+    border-radius: var(--menu-border-radius);
+    visibility: hidden;
+    transition: .25s;
+    opacity: 0;
+    box-shadow: var(--main-box-shadow);
+    overflow: hidden; /* 이 속성이 중요하다 hover시 이쁘게 보이려고 */
+}
+.dropdown.active .option {
+    visibility: visible;
+    opacity: 1;
+}
+.dropdown .option div {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.dropdown.active .option div:hover {
+    transition: .25s;
+    background: #f4a261;
+    color: #fff;
+}
+
+/* overflow:hidden 을 주면 필요없는 코드(first-child last-child) */
+.dropdown.active div:first-child:hover {
+    border-top-right-radius: var(--menu-border-radius);
+}
+.dropdown.active div:last-child:hover {
+    border-bottom-left-radius: var(--menu-border-radius);
+    border-bottom-right-radius: var(--menu-border-radius);
+}
