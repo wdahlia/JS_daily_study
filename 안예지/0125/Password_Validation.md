@@ -1,7 +1,9 @@
+![password_validation](../assets/password_validation.gif)
+
 # 1. HTML 마크업
 
 ```
-input 안의 값에 따라 vlidation 에 있는 리스트에 유효한지 계속 점검
+input 안의 값에 따라 validation 에 있는 리스트에 유효한지 계속 점검
 ```
 
 
@@ -21,4 +23,5 @@ input 안의 값에 따라 vlidation 에 있는 리스트에 유효한지 계속
   숫자가 들어간 것을 어떻게 검사하는가?
   ```
 
-  => `RegExp` 사용
+  => `RegExp`, `regexp.test()` 활용
+
