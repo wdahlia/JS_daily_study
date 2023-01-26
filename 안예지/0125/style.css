@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #94d2bd;
+    min-height: 100vh;
+}
+.box {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .inputBox {
+    position: relative;
+    width: 100%;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    background: #fff;
+}
+
+.inputBox input {
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 10px 5px;
+}
+.box .inputBox #toggleBtn {
+    position: absolute;
+    transform: translateY(-100%);
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    background: #0a9396;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 가상 선택자 */
+.box .inputBox #toggleBtn::before {
+    content: '\f06e';
+    font-family: fontAwesome;
+    color: #94d2bd;
+}
+
+.box .inputBox #toggleBtn.show::before {
+    content: '\f070';
+}
+.validation {
+    background-color: #005f73;
+    padding: 10px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+.validation ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+}
+.validation ul li {
+    font-size: 14px;
+    list-style: none;
+    color: white;
+    transition: 0.5s;
+}
+.validation ul li.valid {
+    color: rgba(0, 0, 0, 0.301);
+}
+.validation ul li::before {
+    content: '\f192';
+    width: 15px;
+    height: 5px;
+    margin-right: 4px;
+    font-family: fontAwesome;
+    display: inline-flex;
+}
+.validation ul li.valid::before {
+    content: '\f00c';
+    color: #94d2bd;
+}
+
+

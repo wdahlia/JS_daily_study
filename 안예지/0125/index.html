@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password ValidatioN Check</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="box">
+        <div class="inputBox">
+            <input type="password" placeholder="Password" id="pswrd">
+            <span id="toggleBtn"></span>
+        </div>
+        <div class="validation">
+            <ul>
+                <li id="lower">하나 이상의 소문자가 필요합니다.</li>
+                <li id="upper">하나 이상의 대문자가 필요합니다.</li>
+                <li id="number">하나 이상의 숫자가 필요합니다.</li>
+                <li id="special">하나 이상의 특수문자가 필요합니다.</li>
+                <li id="length">최소 8글자 이상이어야 합니다.</li>
+            </ul>
+        </div>
+
+
+    </div>
+    <script>
+        const pswrd = document.querySelector('#pswrd')
+        const data = pswrd.value
+
+        const lower = document.querySelector('#lower')
+        const upper = document.querySelector('#upper')
+        const number = document.querySelector('#number')
+        const special = document.querySelector('#special')
+        const length = document.querySelector('#length')
+
+        function handleChange(data) {
+            const lowerTest = RegExp('(?=.*[a-z])')
+            const upperTest = RegExp('(?=.*[A-Z])')
+            const numberTest = RegExp('(?=.*[0-9])')
+            const specialTest = RegExp('(?=.*[!@#\$%\^&\*])')
+            const lengthTest = RegExp('(?=.{8,})')
+
+            if (lowerTest.test(data)) {
+                lower.classList.add('valid');
+            } else {
+                lower.classList.remove('valid');
+            }
+
+            if (upperTest.test(data)) {
+                upper.classList.add('valid');
+            } else {
+                upper.classList.remove('valid');
+            }
+
+            if (numberTest.test(data)) {
+                number.classList.add('valid');
+            } else {
+                number.classList.remove('valid');
+            }
+            if (specialTest.test(data)) {
+                special.classList.add('valid');
+            } else {
+                special.classList.remove('valid');
+            }
+            if (lengthTest.test(data)) {
+                length.classList.add('valid');
+            } else {
+                length.classList.remove('valid');
+            }
+
+        }
+
+        pswrd.addEventListener('keyup', (e) => {
+            handleChange(e.target.value)
+        })
+
+        const toggleBtn = document.querySelector('#toggleBtn')
+        toggleBtn.addEventListener('click', () => {
+            if (pswrd.type === 'password') {
+                pswrd.type = 'text'
+            } else {
+                pswrd.type = 'password'
+            }
+            toggleBtn.classList.toggle('show')
+        })
+    </script>
+
+</body>
+
+</html>
