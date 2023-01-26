@@ -1,0 +1,104 @@
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rosybrown;
+}
+
+.dropdown {
+    position: relative;
+    height: 50px;
+    width: 300px;
+
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 28px;
+    width: 12px;
+    height: 2px;
+    background-color: #555;
+    transform: rotate(40deg);
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.dropdown.active::before {
+    right: 20px;
+}
+
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 12px;
+    height: 2px;
+    background-color: #555;
+    transform: rotate(-40deg);
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.dropdown.active::after {
+    right: 28px;
+}
+
+input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    box-shadow: 0px 5px 20px rgb(0, 0, 0, 0.5);
+}
+
+.option {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.25s;
+}
+
+.dropdown.active .option {
+    visibility: visible;
+    opacity: 1;
+}
+
+.option div {
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.option div:hover {
+    background-color: rgb(156, 116, 116);
+    color: white;
+}
