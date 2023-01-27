@@ -59,6 +59,7 @@ header ul li a {
     letter-spacing: 0.2em;
 }
 
+/* 밑줄 */
 header ul li a::before {
     content: '';
     position: absolute;
@@ -113,4 +114,82 @@ header .search {
     font-size: 1.25em;
     background: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.searchBtn {
+    position: relative;
+    left: 30px;
+    top: 2.5px;
+    transition: 0.5s ease-in-out;
+}
+.searchBtn.active {
+    left: 0;
+}
+.closeBtn {
+    /* 왜 투명도 조절까지 해주는 걸까? */
+    /* 후에 opacity 1이 될 때 부드럽게 등장 처리하기 위함 */
+    opacity: 0;
+    /* 기본적으로 안 보이게 */
+    /* (1)나중에 검색창이 열리면 보이게 바뀔 것 */
+    /* visibility: hidden; */
+    transition: 0.5s;
+    scale: 0;
+}
+.closeBtn.active {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    scale: 1;
+}
+.menuToggle {
+    position: relative;
+    display: none;
+}
+
+/* @media query */
+@media screen and (max-width: 800px) {
+    .searchBtn {
+        left: 0;
+    }
+    .menuToggle {
+        position: absolute;
+        display: block;
+        font-size: 2em;
+        cursor: pointer;
+        transform: translateX(30px);
+        z-index: 10;
+    }
+    header .navigation {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: 50px;
+        left: 0;
+    }
+
+
+header.open .navigation {
+    /* 네비게이션바(height: 80px) 바로 아래에 뜨도록 */
+    top: 80px;
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    height: calc(100vh - 80px);
+    /* navbar(height: 80px)를 제외한 모든 영역을 차지 */
+    padding: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transform: translate(0);
+    transition: .5s ease-in-out;
+}
+header.open .navigation li a {
+    font-size: 1.25em;
+}
+.hide {
+    display: none;
+}
 }
