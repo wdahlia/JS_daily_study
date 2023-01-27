@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+}
+
+.carousel {
+    overflow-x: auto;
+    display: flex;
+    padding: 0px 10vw;
+    scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    margin: 5px;
+    font-size: 40px;
+    color: white;
+    padding-top: 100px;
+}
+
+.item:nth-child(1) {
+    background: red;
+}
+
+.item:nth-child(2) {
+    background: orange;
+}
+
+.item:nth-child(3) {
+    background: yellow;
+}
+
+.item:nth-child(4) {
+    background: yellowgreen;
+}
+
+.item:nth-child(5) {
+    background: green;
+}
+
+.item:nth-child(6) {
+    background: skyblue;
+}
+
+.item:nth-child(7) {
+    background: blue;
+}
+
+.item:nth-child(8) {
+    background: navy;
+}
+
+.item:nth-child(9) {
+    background: violet;
+}
+
+.item:nth-child(10) {
+    background: purple;
+}
+
+.pre-btn, .nxt-btn {
+    font-size: 50px;
+    position: absolute;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    top: 40%;
+}
+
+.pre-btn {
+    left: 10px;
+    opacity: 0.5;
+}
+
+.nxt-btn {
+    right: 10px;
+    opacity: 0.5;
+}
+
+.pre-btn:hover, .nxt-btn:hover {
+    color: black;
+    opacity: 1;
+}
