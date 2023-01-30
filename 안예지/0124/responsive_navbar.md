@@ -1,3 +1,5 @@
+![responsive_navbar](assets/responsive_navbar.gif)
+
 # 1. HTML 마크업
 
 ul 태그 사용해서 
