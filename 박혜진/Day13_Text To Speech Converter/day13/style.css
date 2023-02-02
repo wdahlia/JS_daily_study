@@ -1,0 +1,70 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: url(https://www.shaip.com/wp-content/uploads/2022/12/Blog_Difference-Between-Speech-Voice-Recognition.jpg) center center fixed no-repeat rgb(34, 54, 142);
+}
+
+.container {
+  background-color: rgb(255, 255, 255, 0.7);
+  width: 90%;
+  max-width: 37.5em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 0.5em;
+  padding: 2em;
+  box-shadow: 0 1.87em 3.75em #555;
+}
+
+textarea {
+  font-size: 1em;
+  width: 100%;
+  border-radius: 0.5em;
+  resize: none;
+  border: 0.12em solid #555;
+}
+
+#submit {
+  background: transparent;
+  border: none;
+  color: rgb(45, 45, 152);
+  cursor: pointer;
+  position: relative;
+  padding: 0.5em 0.2em 0.2em 0.2em;
+  left: 94%;
+}
+
+.submit ion-icon {
+  transform: rotate(90deg);
+  font-size: 1.7em;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.2em 0.2em 0.5em 0.2em;
+}
+
+.controls button {
+  background: transparent;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.controls button:hover{
+  color: rgb(67, 67, 184);
+}
+
+#resume {
+  display: none;
+}
