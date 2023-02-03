@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'GmarketSansMedium';
+}
+
+body {
+    background: url(https://media.istockphoto.com/id/1282788290/vector/blue-cloud-cartoon-on-top-sky-outdoor-landscape-background-flat-design-vector.jpg?s=612x612&w=0&k=20&c=7c28seVQ82mi8RlFC6CSfJHYfURxvfLtmRPTx9Gdg_g=) center center no-repeat rgb(188, 240, 255);
+    background-size: 55%;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 35em;
+    height: 20em;
+    padding: 3.12em 1.24em;
+    position: relative;
+    top: 11em;
+    left: 27em;
+    border-radius: 1em;
+    box-shadow: 1px 1px rgb(0, 0, 0, 0.5);
+}
+
+input[type='file'] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    background-color: aliceblue;
+    display: block;
+    position: relative;
+    text-align: center;
+    padding: 0.4em 0;
+    font-weight: 500;
+    border-radius: 0.3em;
+}
+
+label:hover {
+    background-color: rgb(41, 96, 168);
+    color: white;
+}
+
+#num-of-files {
+    font-weight: 700;
+    margin: 1.25em 0;
+    text-align: center;
+    color: darkblue;
+}
+
+ul {
+    list-style: none;
+    height: 10em;
+    overflow-y: scroll;
+}
+
+.container li {
+    background-color: white;
+    color: darkblue;
+    font-size: 0.8em;
+    padding: 1em;
+    margin: 0.4em 0;
+    border-radius: 0.3em;
+    display: flex;
+    justify-content: space-between;
+}
