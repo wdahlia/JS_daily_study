@@ -60,7 +60,7 @@ label:hover {
 ul {
     list-style: none;
     height: 10em;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .container li {
