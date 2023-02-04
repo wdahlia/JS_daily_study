@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="inputBox">
+          <input type="password" name="" id="pswrd" placeholder="Password" onkeyup="checkPassword(this.value)">
+          <span id="toggleBtn"></span>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        </div>
+        <div class="validation">
+          <ul>
+            <li id="lower">최소 하나 이상의 소문자를 넣어주세요.</li>
+            <li id="upper">최소 하나 이상의 대문자를 넣어주세요.</li>
+            <li id="number">최소 하나 이상의 숫자를 넣어주세요.</li>
+            <li id="special">최소 하나 이상의 특수문자를 넣어주세요.</li>
+            <li id="length">8글자 이상이어야 합니다.</li>
+          </ul>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+    <!-- 아이콘 -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
