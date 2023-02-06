@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    input {
+      outline: none;
+      border: none;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #8cccff;
+    }
+
+    .box {
+      position: relative;
+      width: 300px;
+    }
+
+    .box .inputBox {
+      position: relative;
+      width: 100%;
+      background-color: #fff;
+      padding: 5px;
+      border-radius: 8px;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .box .inputBox input {
+      position: relative;
+      width: 100%;
+      padding: 10px 5px;
+    }
+
+    .box .inputBox #toggleBtn {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      width: 34px;
+      height: 34px;
+      background-color: rgba(0, 0, 0, 0.05);
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box .inputBox #toggleBtn::before {
+      content: '\f06e';
+      font-family: fontAwesome;
+    }
+
+    /* toggleBtn 비밀번호 텍스트로 바뀔때 보이는 아이콘 */
+    .box .inputBox #toggleBtn.hide::before {
+      content: '\f070';
+      font-family: fontAwesome;
+    }
+
+    .validation {
+      background: rgba(15, 31, 71, 0.314);
+      padding: 10px;
+      margin-top: 30px;
+      border-radius: 8px;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+      letter-spacing: -0.6px;
+    }
+
+    .validation ul {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .validation ul li {
+      position: relative;
+      color: #fff;
+      font-size: 0.85em;
+      transition: 0.5s;
+    }
+
+    .validation ul li.valid {
+      color: rgba(255, 255, 255, 0.413);
+    }
+
+    .validation ul li::before { 
+      content: '\f192';
+      font-family: fontAwesome;
+      color: rgba(42, 3, 3, 0.487);
+      width: 20px;
+      height: 10px;
+      display: inline-flex;
+    }
+
+    .validation ul li.valid::before {
+      content: '\f058';
+      font-family: fontAwesome;
+      color: #0f0;
+    }
