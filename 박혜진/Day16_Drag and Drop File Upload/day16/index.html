@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop File Upload</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/77ad8525ff.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <input type="file" id="upload-button" multiple accept="image/*" />
+        <label for="upload-button"><i class="fa-solid fa-file-arrow-up"></i> Choose Or Drop Photos</label>
+        <div id="error"></div>
+        <div id="image-display"></div>
+    </div>
+    <script src="./main.js"></script>
+    <!-- 아이콘 -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
