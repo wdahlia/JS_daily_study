@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #f2e9e4;
+}
+
+:root {
+    --clr-error-msg: #f07167;
+}
+
+.container {
+    position: absolute;
+    width: 60%;
+    background: #ffffff;
+    max-width: 37.5em;
+    /* padding으로 height 없이 박스 사이즈 조정 */
+    padding: 3.12em 1.87em;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 1em;
+    box-shadow: 0 1.25em 3.43em rgba(0, 0, 0, 0.08);
+    border-radius: 0.5em;
+}
+
+input[type="file"] {
+     display: none;
+}
+label {
+    display: block;
+    position: relative;
+    background-color: #c9ada7;
+    color: #ffffff;
+    font-size: 1.1em;
+    text-align: center;
+    width: 16em;
+    padding: 1em .5em;
+    border-radius: 0.3em;
+    line-height: 28px;
+    margin: 0 auto 1em auto;
+    cursor: pointer;
+}
+#image-display {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    /* 약간 핀터레스트 같은 느낌 */
+    justify-content: space-evenly;
+    gap: 1.25em;
+    flex-wrap: wrap;
+}
+#image-display figure {
+    /* 부모 너비가 45% */
+    width: 45%;
+}
+#image-display img {
+    /* 이미지는 부모의 100% */
+    width: 100%;
+}
+#image-display figcaption {
+    font-size: .8em;
+    text-align: center;
+    color: #5a5861;
+    /* 이미지 제목이 길어지면 줄바꿈 */
+    overflow-wrap: break-word;
+}
+.active {
+    border: .2em dashed #9a8c98;
+}
+#error {
+    text-align: center;
+    color: var(--clr-error-msg);
+
+}
