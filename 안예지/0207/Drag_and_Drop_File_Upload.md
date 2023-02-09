@@ -1,3 +1,5 @@
+![drag_and_drop_file_upload](assets/drag_and_drop_file_upload.gif)
+
 # 모르는 개념 정리
 
 ```
@@ -54,9 +56,14 @@
 # 1. HTML
 
 ```
+container - input, label, error div, #image-display
 ```
 
+```
+#imagedisplay - figure - img, figcaption
+```
 
+컨테이너 안에 `input`, `label`, `에러메시지 div`와 `이미지미리보기 div`가 <u>같은 레벨</u>에 있고(에러메시지는 평소 빈 문자열, 마치 없는 것처럼 보인다), 이미지 미리보기 div안에는 figure태그가 이미지가 추가되면 생성된다. 그 안에는 img태그와 figcaption태그가 같은 레벨로 구성
 
 
 

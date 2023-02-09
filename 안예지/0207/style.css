@@ -20,7 +20,7 @@ body {
     padding: 3.12em 1.87em;
     transform: translateX(-50%);
     left: 50%;
-    top: 1em;
+    top: 7em;
     box-shadow: 0 1.25em 3.43em rgba(0, 0, 0, 0.08);
     border-radius: 0.5em;
 }
@@ -41,6 +41,12 @@ label {
     line-height: 28px;
     margin: 0 auto 1em auto;
     cursor: pointer;
+    filter: brightness(1);
+    transition: .2s;
+}
+
+label:hover {
+    filter: brightness(.9);
 }
 #image-display {
     position: relative;

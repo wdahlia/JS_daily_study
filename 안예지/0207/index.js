@@ -49,4 +49,35 @@ container.addEventListener('dragenter', (e) => {
     e.preventDefault();
     e.stopPropagation();
     container.classList.add('active');
-}, false)
+    console.log(e.target, "enter")
+}, true);
+
+container.addEventListener('dragleave', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    container.classList.remove('active');
+})
+
+container.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log(e.target, "over")
+    container.classList.add('active');
+})
+
+container.addEventListener('drop', (e) => {
+    e.preventDefault();
+    // e.stopPropagation();
+    container.classList.remove('active');
+    let draggedData = e.dataTransfer;
+    let files = draggedData.files;
+    imageDisplay.textContent = "";
+    Array.from(files).forEach(file => {
+        fileHandler(file, file.name, file.type);
+    });
+
+})
+
+window.onload = () => {
+    error.innerText = "";
+}
