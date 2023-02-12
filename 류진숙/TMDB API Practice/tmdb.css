@@ -24,21 +24,58 @@ input {
 }
 
 .container #movie-input {
-  padding: 0.5rem 1.5rem;
-  border: 3px solid black;
+  padding: 1rem 5rem;
+  background-color: rgb(253, 252, 248);
+  border-radius: 20px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+}
+
+.container #movie-input::placeholder {
+  color: rgb(85, 84, 82);
 }
 
 .movie-list {
+  position: relative;
   margin-top: 5rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  border: 3px solid black;
+  /* border: 3px solid black; */
   max-width: 90%;
   gap: 10px;
 }
 
 .movie-list img {
-  width: 210px;
-  height: 300px;
+  width: 250px;
+  height: 350px;
+  border-radius: 20px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.1);
 }
+
+.movie-list img:hover {
+  transform: translate(0,-3%);
+  transition: 0.2s ease-in-out;
+}
+
+.movie-list .content-area {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+/* .movie-list img:hover ~ .content-area {
+  display: block;
+} */
+
+/* .movie-list .content-area:hover {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  color: white;
+} */
+
