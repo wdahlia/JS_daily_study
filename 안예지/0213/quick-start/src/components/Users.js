@@ -8,7 +8,7 @@ const userList = [{
 {
     id: 2,
     name: '박혜진',
-    imageUrl: 'https://dummyimage.com/90/eba7b3/fffce3&text=hye',
+    imageUrl: 'https://dummyimage.com/90/eba7b3/fffce3&text=jelly',
 },
 {
     id: 3,
