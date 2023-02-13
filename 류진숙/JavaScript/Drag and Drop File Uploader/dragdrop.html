@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drag and Drop File Uploader</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="dragdrop.css">
+</head>
+<body>
+  
+  <div class="container">
+    <input type="file" name="" id="files-upload" multiple accept="image/*"/>
+    <label for="files-upload"><i class="fa-solid fa-file-arrow-up"></i> 파일을 업로드 해주세요</label>
+  </div>
+  <div id="error"></div>
+  <div id="image-files"></div>
+  
+  <script src="dragdrop.js"></script>
+</body>
+</html>

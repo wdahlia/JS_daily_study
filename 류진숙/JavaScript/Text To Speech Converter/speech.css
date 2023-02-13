@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+textarea {
+  border: none;
+  outline: none;
+  resize: none; /* 오른쪽 밑 resize하는 것 없어짐 */
+  padding: 10px;
+}
+
+textarea::placeholder {
+  color: rgba(100, 101, 100, 0.679);
+  font-size: 0.8rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(152, 243, 190);
+  row-gap: 1rem;
+  width: 30rem;
+  height: 22rem;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  box-shadow: 5px 10px 15px rgba(10, 47, 5, 0.1);
+}
+
+.btn-area {
+  align-self: end;
+}
+
+.btn-area .resume,
+.btn-area .pause {
+  background-color: rgb(221, 255, 197);
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.067);
+  max-width: 45px;
+}
+
+.btn-area .resume {
+  display: none;
+}
+
+.btn-area .resume i,
+.btn-area .pause i {
+  font-size: 1.3rem;
+  color: rgb(79, 98, 87);
+}
+
+.text-area {
+  text-align: center;
+}
+
+.submit-area {
+  text-align: center;
+  /* padding-bottom: 1rem; */
+}
+
+.submit-area .input-text {
+  padding: 0.3rem 1rem;
+  background:rgb(209, 255, 247);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 10px;
+  color: rgb(79, 98, 87);
+}
