@@ -23,7 +23,6 @@ body {
 .dropdown {
   position: relative;
   width: 250px;
-  cursor: pointer;
 }
 
 .dropdown::before {
@@ -81,7 +80,6 @@ body {
   visibility: hidden;
   opacity: 0;
   transition: 0.2s;
-  cursor: pointer;
 }
 
 .dropdown.activate .options {
