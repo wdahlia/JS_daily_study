@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: inherit;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+select {
+  text-align: center;
+  border: 3px solid rgb(181, 224, 206);
+  background-color: rgb(224, 248, 238);
+  border-radius: 10px;
+  padding: 0.2rem 0.3rem;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 80px;
+  align-self: flex-end;
+}
+
+li {
+  list-style: none;
+  background-color: rgb(195, 222, 213);
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 500px;
+  min-height: 100px;
+  padding: 20px;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.li {
+  display: block;
+}
+
+.li.hidden {
+  display: none;
+}
+
+/* 하단 pages 버튼 부분 */
+.pages {
+  display: flex;
+  justify-content: space-around;
+  max-width: 2000px;
+  margin-top: 1rem;
+}
+
+.prev,
+.next {
+  font-size: 1.3rem;
+  color: rgb(59, 207, 207);
+  cursor: pointer;
+}
+
+.prev.disabled,
+.next.disabled {
+  color: rgb(167, 165, 163);
+}
+
+/* .pages-num {
+  cursor: pointer;
+} */
+
+.pages-num .btn {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.8rem;
+  background-color: rgb(173, 223, 194);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pages-num .btn.active {
+  color: rgb(167, 165, 163);
+  background-color: black;
+}
+
+.pages-num .btn:first-child {
+  margin-left: 0.8rem;
+}
