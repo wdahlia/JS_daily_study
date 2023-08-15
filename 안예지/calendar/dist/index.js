@@ -52,7 +52,6 @@ prevNextIcon.forEach((icon) => {
             date = new Date(currYear, currMonth);
             currYear = date.getFullYear();
             currMonth = date.getMonth();
-            return;
         }
         date = new Date();
         renderCalendar();
